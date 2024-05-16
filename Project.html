@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Сеть супермаркетов</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="C:\labs\IR\css\input.css">
+</head>
+<body class="telo">
+    <header class="head">
+        <a href="Project.html"><img class="storename" src="Название магазина.svg"></a>
+        <a href="can.html"><div class="butons">Корзина</div></a> 
+        <a href="personalAccount.html"><div class="butons">Личный кабинет</div></a>
+        <a href="goods.html"><div class="butons">Товары</div></a>
+    </header>
+    <header class="head1">
+        <div class="sidenav">
+            <button class="dropdown-btn">Меню
+            </button>
+            <div class="dropdown-container">
+                <a href="goods.html">Товары</a>
+                <a href="personalAccount.html">Личный кабинет</a>
+                <a href="can.html">Корзина</a> 
+            </div>
+          </div>
+    </header>
+<main class="maingridproject">
+
+  <div class="news1"><img class="imggood" src="milk1l.jpg">Молоко «Брест-Литовск» 3.6 %, 1 л.<br>2.4Br <del>2.49Br</del></div>
+  <div class="news2"><img class="imggood" src="bread2jpg.jpg">Хлеб «Ранак» отрубной,нарезанный,500 г<br>1.5Br <del>1.84Br</del></div>
+  <div class="news3"><img class="imggood" src="fruit1.jpg">Яблоко «Айдаред» 1 кг<br>4.05Br <del>4.49Br</del></div>
+  <div class="news4"><img class="imggood" src="fruit2.jpg">Груша «Пакхам» 1 кг<br>4.19Br <del>5.99Br</del></div>
+  <div class="news5"><img class="imggood" src="vegetables1.jpg">Огурец «Бьерн» 1 кг<br>6.29Br <del>6.53Br</del></div>
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img class="imggood" src="milk1l.jpg">
+      <div class="text">Молоко «Брест-Литовск» 3.6 %, 1 л.<br>2.4Br <del>2.49Br</del></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img class="imggood" src="bread2jpg.jpg">
+      <div class="text">Хлеб «Ранак» отрубной,нарезанный,500г<br>1.5Br <del>1.84Br</del></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img class="imggood" src="fruit1.jpg">
+      <div class="text">Яблоко «Айдаред» 1 кг<br>4.05Br <del>4.49Br</del></div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div class="slideshow-change" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</main>
+<footer class="foot">
+    <div class="fdiv">
+        <div class="ftext2">
+            <p>ВЫ МОЖЕТЕ НАЙТИ НАС:</p>
+            <img class="image" src="VK.com-logo.svg"> Вконтакте
+        </div>
+        <div class="ftext1">
+        <p>СОТРУДНИЧЕСТВО</p>
+        <a class="col" href="jobs.html">Вакансии</a>
+        </div>
+        
+    </div>
+    </footer>
+    <script type="text/javascript" src="search.js"></script>
+        <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+    </script>
+    <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+</body>
+</html>
