@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<title>Личный кабинет</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <title></title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="C:\labs\IR\css\input.css">
     </head>
     <body>
@@ -24,20 +24,13 @@
               </div>
         </header>
         <main class="main">
-    <form class="settings">
-<h3>Имя</h3>
-<input type="text" placeholder="Ваше имя">
-<button type="submit">Изменить</button>
-<h3>Почта клиента</h3>
-<input type="email" placeholder="Ваша почта">
-<button type="submit">Изменить</button>
-<h3>Номер клиента</h3>
-<input type="text" placeholder="Ваш номер">
-<button type="submit">Изменить</button>
-<h3>Адрес клиента</h3>
-<input type="text" placeholder="Ваш адрес">
-<button type="submit">Изменить</button>
-    </form>
+        <div class="goods1">
+            <button onclick="addFruit3Selection('fruit3')" class="add">Добавить</button>
+            <p class="goodname">Банан, 1 кг<br>4.71Br</p>
+            <div class="imagegood1"><img src="fruit3.jpg" ></div>
+            <hr>
+            <p>Описание</p>
+        </div>
         </main>
         <footer class="foot">
             <div class="fdiv">
@@ -53,21 +46,21 @@
             </div>
             </footer>
             <script type="text/javascript" src="search.js"></script>
-            <script>
-                var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-        
-        for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          });
-        }
-            </script>
+        <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+    </script>
     </body>
 </html>

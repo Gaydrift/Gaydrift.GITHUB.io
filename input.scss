@@ -1,0 +1,827 @@
+
+/*<div class="news1"><img class="imggood" src="milk1l.jpg">Молоко «Брест-Литовск» 3.6 %, 1 л.<br>2.4Br <del>2.49Br</del></div>
+<div class="news2"><img class="imggood" src="bread2jpg.jpg">Хлеб «Ранак» отрубной,нарезанный,500 г<br>1.5Br <del>1.84Br</del></div>
+<div class="news3"><img class="imggood" src="fruit1.jpg">Яблоко «Айдаред» 1 кг<br>4.05Br <del>4.49Br</del></div>
+<div class="news4"><img class="imggood" src="fruit2.jpg">Груша «Пакхам» 1 кг<br>4.19Br <del>5.99Br</del></div>
+<div class="news5"><img class="imggood" src="vegetables1.jpg">Огурец «Бьерн» 1 кг<br>6.29Br <del>6.53Br</del></div>*/
+
+@media(max-width: 3000px){
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 0 0;
+}
+main{
+    height: 500px;
+}
+a{
+    text-decoration: none;
+}
+.storename{
+    width: 230px;
+    height: 100px;
+    margin: 0px 10px 0 30px;
+}
+.formhead{
+    float: right;
+}
+.search{
+    border: solid black 1px;
+    width: 640px;
+    height: 50px;
+    margin: 40px 0 0 100px;
+}
+.head{
+    border-bottom: solid black 1px;
+    height:130px;
+    background-color: #1d272a;
+}
+.dropdown-btn {
+    display: none;
+  }
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+.butons{
+width: 200px;
+height: 20px;
+text-align: center;
+float: right;
+margin: 60px 40px 0 0;
+color: white;
+}
+.butons:hover{
+    color: grey;
+}
+.foot{
+    border-top: solid black 1px;
+    display: flex;
+    height:200px;
+    background-color: #585858;
+    flex: 0 0 end;
+
+}
+.image{
+    width: 40px;
+    height: 40px;
+}
+.fdiv{
+    width: 100%;
+}
+.col{
+    color: white;
+}
+.col:hover{
+    color: grey;
+}
+.ftext1{
+    color: white;
+    float: left;
+text-align: center;
+margin: 10px 0 0 20px;
+}
+.ftext2{
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin: 10px 0 0 20px;
+}
+.maingridproject{
+    display: grid;
+    grid-template-columns: 500px 350px 350px;
+    grid-template-rows: 250px 250px;
+}
+.maingridgoods{
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.maingridcan{
+    display: grid;
+    grid-template-columns: auto auto auto auto 100px 150px;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+.main{
+    margin-top: 10px;
+    display: block;
+}
+
+.slideshow-container {
+    display: none;
+  }
+  
+.news1{
+    margin: 20px 30px 0 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: center;
+}
+.news2{
+    margin: 20px 30px 0 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+.news3{
+    margin: 20px 30px 0 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+.news4{
+    margin: 10px 30px 0 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+.news5{
+    margin: 10px 30px 0 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+.bire{
+    border: solid black 1px;
+    width: 80px;
+    height: 50px;
+}
+.silka{
+    float: right;
+    margin: 30px 0px 0px 0px;
+}
+.imggood{
+    width: 100%;
+    height: 80%;
+}
+.imagegood1{
+    margin: 0 0 0 20px;
+    width: 250px;
+    height: 250px;
+}
+DIV.imagegood1 > IMG {
+width: 100%;
+height: 100%;
+}
+.goodname{
+    float: right;
+    margin: 20px 20px 0 0;
+}
+.add{
+    border:solid black 1px;
+    width: 130px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    background-color: greenyellow;
+    float: right;
+    margin: 20px 20px 0 0;
+}
+hr{
+    background-color: black;
+    height: 1px;
+    border: 0;
+}
+.left{
+    float: left;
+    width: 100px;
+    margin: 10px 40px 0 10px;
+}
+.right{
+    float: right;
+}
+.good{
+    border: solid black 1px;
+    width: 200px;
+    height: 260px;
+    margin: 20px 30px 0 20px;
+}
+.goodtovar{
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+}
+.container {
+    overflow: hidden;
+  }
+  .filterDiv {
+    float: left;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 40px 30px 0 0;
+    display: none;
+    color: black;
+  }
+  .show {
+    display: block;
+  }
+  .noshow{
+    display: none;
+  }
+  .btn {
+    width: 100px;
+    height: auto;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #ddd;
+  }
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+.clean{
+    border: solid black 1px;
+    float: right;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 17;
+    grid-row-end: 18;
+    margin-top: 10px;
+}
+.clean:hover{
+    cursor: pointer;
+    color: grey;
+}
+.order{
+    display: none;
+    border: solid black 1px;
+    height: 130px;
+    width: 1360px;
+    margin: 60px 40px 0 40px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+.goodcan{
+    border: solid black 1px;
+    float: left;
+    height: 130px;
+    width: 260px;
+}
+.plus-butn{
+    border: solid black 1px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: right;
+    margin: 30px 10px 0 0;
+}
+.amount{
+    border: solid black 1px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    float: right;
+    margin: 30px 10px 0 0;
+}
+.minus-butn{
+    border: solid black 1px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: right;
+    margin: 30px 10px 0 0;
+}
+.payment{
+    border: solid black 1px;
+    height: 30px;
+    float: right;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 17;
+    grid-row-end: 18;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.store1{
+    border: solid black 1px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 430px;
+    height: 50px;
+    margin: 20px 0 0 40px;
+}
+.store2{
+    border: solid black 1px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 430px;
+    height: 50px;
+    margin: 20px 0 0 40px;
+}
+.store3{
+    border: solid black 1px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 430px;
+    height: 50px;
+    margin: 20px 0 0 40px;
+}
+.settings{
+    text-align: center;
+    }
+}
+    @media(max-width: 1200px){
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 0 0 0 0;
+        }
+        main{
+            height: 500px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .storename{
+            width: 230px;
+            height: 100px;
+            margin: 0px 10px 0 30px;
+        }
+        .formhead{
+            float: right;
+        }
+        .search{
+            border: solid black 1px;
+            width: 640px;
+            height: 50px;
+            margin: 40px 0 0 100px;
+        }
+        .head{
+            border-bottom: solid black 1px;
+            height:130px;
+            background-color: #1d272a;
+        }
+        .head1{
+            border-bottom: solid black 1px;
+            height:30px;
+            background-color: #333637;
+        }
+        
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  height: 90%;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+/* Hide the images by default */
+.mySlides {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    position: absolute;
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+        .sidenav {
+            width: 200px;
+            overflow-x: hidden;
+          }
+          
+          /* Стиль боковых навигационных ссылок и раскрывающейся кнопки */
+          .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            border: none;
+            background: none;
+            width:100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+          }
+          
+          /* При наведении курсора мыши */
+          .sidenav a:hover, .dropdown-btn:hover {
+            color: #f1f1f1;
+          }
+          
+          
+          /* Добавить активный класс для кнопки активного выпадающего списка */
+          .active {
+            background-color: green;
+            color: white;
+          }
+          
+          /* Выпадающий контейнер (по умолчанию скрыт). Необязательно: добавьте более светлый цвет фона и некоторые левые отступы, чтобы изменить дизайн выпадающего содержимого */
+          .dropdown-container {
+            display: none;
+            position: absolute;
+            background-color: #333637;
+            padding-left: 8px;
+            z-index: 9999;
+          }
+        .butons{
+        display: none;
+        }
+        .butons1{
+            display: block;
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            float: right;
+            margin: 60px 40px 0 0;
+            color: white;
+            background-color: #1d272a;
+        }
+        .butons:hover{
+            color: grey;
+        }
+        .foot{
+            border-top: solid black 1px;
+            display: flex;
+            height:200px;
+            background-color: #585858;
+            flex: 0 0 end;
+            bottom: 0;
+        }
+        .image{
+            width: 40px;
+            height: 40px;
+        }
+        .imggood{
+            width: 100%;
+            height: 80%;
+        }
+        .fdiv{
+            width: 100%;
+        }
+        .col{
+            color: white;
+        }
+        .col:hover{
+            color: grey;
+        }
+        .ftext1{
+            color: white;
+            float: left;
+        text-align: center;
+        margin: 10px 0 0 20px;
+        }
+        .ftext2{
+            color: white;
+            text-align: center;
+            display: inline-block;
+            margin: 10px 0 0 20px;
+        }
+        .maingridproject{
+            display: block;
+        }
+        .maingridgoods{
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .maingridcan{
+            display: grid;
+            grid-template-columns: auto auto auto auto 100px 150px;
+            grid-template-rows: auto auto auto auto auto auto;
+        }
+        .main{
+            margin-top: 10px;
+            display: block;
+        }
+        .news1{
+            border: solid black 1px;
+            margin: 20px 30px 0 20px;
+            width: 80%;
+            height: 60%;
+            display: none;
+        }
+        .news2{
+            border: solid black 1px;
+            margin: 20px 30px 0 20px;
+            width: 80%;
+            height: 60%;
+            display: none;
+        }
+        .news3{
+            border: solid black 1px;
+            margin: 20px 30px 0 20px;
+            width: 80%;
+            height: 60%;
+            display: none;
+        }
+        .news4{
+            border: solid black 1px;
+            margin: 20px 30px 0 20px;
+            width: 80%;
+            height: 60%;
+            display: none;
+        }
+        .news5{
+            border: solid black 1px;
+            margin: 20px 30px 0 20px;
+            width: 80%;
+            height: 60%;
+            display: none;
+        }
+        .bire{
+            border: solid black 1px;
+            width: 80px;
+            height: 50px;
+        }
+        .silka{
+            float: right;
+            margin: 30px 0px 0px 0px;
+        }
+        .imagegood1{
+            margin: 0 0 0 20px;
+            border: solid black 1px;
+            width: 250px;
+            height: 250px;
+        }
+        .goodname{
+            float: right;
+            margin: 20px 20px 0 0;
+        }
+        .add{
+            border:solid black 1px;
+            width: 130px;
+            height: 30px;
+            color: white;
+            text-align: center;
+            background-color: greenyellow;
+            float: right;
+            margin: 20px 20px 0 0;
+        }
+        hr{
+            background-color: black;
+            height: 1px;
+            border: 0;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            margin: 10px 40px 0 10px;
+        }
+        .right{
+            float: right;
+        }
+        .good{
+            border: solid black 1px;
+            width: 200px;
+            height: 260px;
+            margin: 20px 30px 0 20px;
+        }
+        .goodtovar{
+            float: left;
+            background-color: #2196F3;
+            color: #ffffff;
+            width: 300px;
+            height: 350px;
+            text-align: center;
+            margin: 2px;
+            display: none;
+        }
+        .container {
+            overflow: hidden;
+          }
+          .filterDiv {
+            
+            float: left;
+            width: 300px;
+            height: 350px;
+            text-align: center;
+            margin: 40px 30px 0 0;
+            display: none;
+            color: black;
+          }
+          .show {
+            display: block;
+          }
+          .noshow{
+            display: none;
+          }
+          .btn {
+            width: 100px;
+            height: auto;
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+          }
+          .btn:hover {
+            background-color: #ddd;
+          }
+          .btn.active {
+            background-color: #666;
+            color: white;
+          }
+        .clean{
+            border: solid black 1px;
+            float: right;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 17;
+            grid-row-end: 18;
+            margin-top: 10px;
+        }
+        .clean:hover{
+            cursor: pointer;
+            color: grey;
+        }
+        .order{
+            display: none;
+            border: solid black 1px;
+            height: 130px;
+            width: 1360px;
+            margin: 60px 40px 0 40px;
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+        .goodcan{
+            border: solid black 1px;
+            float: left;
+            height: 130px;
+            width: 260px;
+        }
+        .plus-butn{
+            border: solid black 1px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            float: right;
+            margin: 30px 10px 0 0;
+        }
+        .amount{
+            border: solid black 1px;
+            width: 30px;
+            height: 20px;
+            text-align: center;
+            float: right;
+            margin: 30px 10px 0 0;
+        }
+        .minus-butn{
+            border: solid black 1px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            float: right;
+            margin: 30px 10px 0 0;
+        }
+        .payment{
+            border: solid black 1px;
+            height: 30px;
+            float: right;
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 17;
+            grid-row-end: 18;
+            margin-top: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .store1{
+            border: solid black 1px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 430px;
+            height: 50px;
+            margin: 20px 0 0 40px;
+        }
+        .store2{
+            border: solid black 1px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 430px;
+            height: 50px;
+            margin: 20px 0 0 40px;
+        }
+        .store3{
+            border: solid black 1px;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 430px;
+            height: 50px;
+            margin: 20px 0 0 40px;
+        }
+        .settings{
+            text-align: center;
+            }
+    }
