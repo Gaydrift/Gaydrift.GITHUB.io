@@ -8,21 +8,21 @@
 <body class="telo">
     <header class="head">
         <a href="Project.html"><img class="storename" src="Название магазина.svg"></a>
-        <a href="can.html"><div class="butons">Корзина</div></a> 
+        <a class="cart" id="cart"><div class="butons">Корзина<div class="cart__num" id="cart_num">0</div></div></a> 
         <a href="personalAccount.html"><div class="butons">Личный кабинет</div></a>
         <a href="goods.html"><div class="butons">Товары</div></a>
     </header>
     <header class="head1">
-        <div class="sidenav">
-            <button class="dropdown-btn">Меню
-            </button>
-            <div class="dropdown-container">
-                <a href="goods.html">Товары</a>
-                <a href="personalAccount.html">Личный кабинет</a>
-                <a href="can.html">Корзина</a> 
-            </div>
-          </div>
-    </header>
+        <div class="menu">
+          <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+          <label for="burger-checkbox" class="burger"></label>
+          <ul class="menu-list">
+              <li><a href="goods.html" class="menu-item">Товары</a><li>
+              <li><a href="personalAccount.html" class="menu-item">Личный кабинет</a><li>
+              
+          </ul>
+      </div>
+      </header>
     <aside class="left">
         <div id="myBtnContainer">
             <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
@@ -33,22 +33,310 @@
         </div>
     </aside>
     <main class="maingridgoods">
-        <a href="goodMilk1.html"><div class="filterDiv milk"><img class="imggood" src="milk1l.jpg">Молоко «Брест-Литовск» 3.6 %, 1 л.<br>2.4Br <del>2.49Br</del></div></a>
-        <a href="goodMilk2.html"><div class="filterDiv milk"><img class="imggood" src="milk2l.jpg">Молоко «Савушкин» ультрапастеризованное, 3.1%, 1 л.<br>2.91Br</div></a>
-        <a href="goodMilk3.html"><div class="filterDiv milk"><img class="imggood" src="milk3.jpg">Сметана «Брест-Литовск» 15%, 180 г<br>1.5Br</div></a>
-        <a href="goodMilk4.html"><div class="filterDiv milk"><img class="imggood" src="milk4l.jpg">Кефир «Брест-Литовск» 3.2%, 950 г<br>2.05Br</div></a>
-        <a href="goodBread1.html"><div class="filterDiv bread"><img class="imggood" src="bread1.jpg">Хлеб «Марусин» нарезанный, 400 г<br>1.6BR</div></a>
-        <a href="goodBread2.html"><div class="filterDiv bread"><img class="imggood" src="bread2jpg.jpg">Хлеб «Ранак» отрубной, нарезанный, 500 г<br>1.5Br <del>1.84Br</del></div></a>
-        <a href="goodBread3.html"><div class="filterDiv bread"><img class="imggood" src="bread3.jpg">Хлеб тостовый светлый XXL 500г(Элит)<br>2.05Br</div></a>
-        <a href="goodBread4.html"><div class="filterDiv bread"><img class="imggood" src="bread4.jpg">Батон «Аппетитный» 240 г<br>0.96Br</div></a>
-        <a href="goodFruit1.html"><div class="filterDiv fruits"><img class="imggood" src="fruit1.jpg">Яблоко «Айдаред» 1 кг<br>4.05Br <del>4.49Br</del></div></a>
-        <a href="goodFruit2.html"><div class="filterDiv fruits"><img class="imggood" src="fruit2.jpg">Груша «Пакхам» 1 кг<br>4.19Br <del>5.99Br</del></div></a>
-        <a href="goodFruit3.html"><div class="filterDiv fruits"><img class="imggood" src="fruit3.jpg">Банан, 1 кг<br>4.71Br</div></a>
-        <a href="goodFruit4.html"><div class="filterDiv fruits"><img class="imggood" src="fruit4.jpg">Апельсин крупный, 1 кг<br>9.33Br</div></a>
-        <a href="goodVegetables1.html"><div class="filterDiv vegetables"><img class="imggood" src="vegetables1.jpg">Огурец «Бьерн» 1 кг<br>6.29Br <del>6.53Br</del></div></a>
-        <a href="goodVegetables2.html"><div class="filterDiv vegetables"><img class="imggood" src="vegetables2.jpg">Картофель, 1 кг<br>1.95Br</div></a>
-        <a href="goodVegetables3.html"><div class="filterDiv vegetables"><img class="imggood" src="vegetables3.jpg">Грибы шампиньоны, 250 г<br>2.99Br</div></a>
-        <a href="goodVegetables4.html"><div class="filterDiv vegetables"><img class="imggood" src="vegetables4.jpg">Свекла 1 кг<br>4.2Br</div></a>
+        <button class="cart big" id="cart">
+            <img>Корзина
+            <div class="cart__num" id="cart_num">0</div>
+          </button>
+    <div class="cards">
+        <div class="card filterDiv milk">
+            <div class="card__top">
+        <a href="goodMilk1.html" class="card__image">
+                <img class="imggood" src="milk1l.jpg">
+        </a>
+            </div>
+            <div class="card__label"></div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">2.30</div>
+                    <div class="card__price card__price--common">2.49</div>
+                  </div>
+            </div>
+            <a class="card__title">Молоко «Брест-Литовск» 3.6 %, 1 л.</a>
+            <button class="card__add">В корзину</button>
+        </div>
+        <div class="card filterDiv milk">
+            <div class="card__top">
+        <a href="goodMilk2.html" class="card__image">
+                <img class="imggood" src="milk2l.jpg">
+        </a>
+        </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">2.91</div>
+            <div class="card__price card__price--common">2.91</div>
+          </div>
+    </div>
+    <a class="card__title">Молоко «Савушкин», 3.1%, 1 л.</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv milk">
+            <div class="card__top">
+        <a href="goodMilk3.html" class="card__image">
+                <img class="imggood" src="milk3.jpg">
+        </a>
+        </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">1.5</div>
+            <div class="card__price card__price--common">1.5</div>
+          </div>
+    </div>
+    <a class="card__title">Сметана «Брест-Литовск» 15%, 180 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv milk">
+            <div class="card__top">
+        <a href="goodMilk4.html" class="card__image">
+                <img class="imggood" src="milk4l.jpg">
+        </a>
+        </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">2.05</div>
+            <div class="card__price card__price--common">2.05</div>
+          </div>
+    </div>
+    <a class="card__title">Кефир «Брест-Литовск» 3.2%, 950 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv bread">
+            <div class="card__top">
+        <a href="goodBread1.html" class="card__image">
+                <img class="imggood" src="bread1.jpg">
+        </a>
+        </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">1.6</div>
+            <div class="card__price card__price--common">1.6</div>
+          </div>
+    </div>
+    <a class="card__title">Хлеб «Марусин» нарезанный, 400 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv bread">
+            <div class="card__top">
+        <a href="goodBread2.html" class="card__image">
+                <img class="imggood" src="bread2jpg.jpg">
+        </a>
+        </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">1.5</div>
+            <div class="card__price card__price--common">1.84</div>
+          </div>
+    </div>
+    <a class="card__title">Хлеб «Ранак» отрубной, 500 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv bread">
+            <div class="card__top">
+        <a href="goodBread3.html" class="card__image">
+                <img class="imggood" src="bread3.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">2.05</div>
+            <div class="card__price card__price--common">2.05</div>
+          </div>
+    </div>
+    <a class="card__title">Хлеб тостовый 500г(Элит)</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv bread">
+            <div class="card__top">
+        <a href="goodBread4.html" class="card__image">
+                <img class="imggood" src="bread4.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">0.96</div>
+            <div class="card__price card__price--common">0.96</div>
+          </div>
+    </div>
+    <a class="card__title">Батон «Аппетитный» 240 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv fruits">
+            <div class="card__top">
+        <a href="goodFruit1.html" class="card__image">
+                <img class="imggood" src="fruit1.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">4.05</div>
+            <div class="card__price card__price--common">4.49</div>
+          </div>
+    </div>
+    <a class="card__title">Яблоко «Айдаред» 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv fruits">
+            <div class="card__top">
+        <a href="goodFruit2.html" class="card__image">
+                <img class="imggood" src="fruit2.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">4.19</div>
+            <div class="card__price card__price--common">5.99</div>
+          </div>
+    </div>
+    <a class="card__title">Груша «Пакхам» 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv fruits">
+            <div class="card__top">
+        <a href="goodFruit3.html" class="card__image">
+                <img class="imggood" src="fruit3.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">4.71</div>
+            <div class="card__price card__price--common">4.71</div>
+          </div>
+    </div>
+    <a class="card__title">Банан, 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv fruits">
+            <div class="card__top">
+        <a href="goodFruit4.html" class="card__image">
+                <img class="imggood" src="fruit4.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">9.33</div>
+            <div class="card__price card__price--common">9.33</div>
+          </div>
+    </div>
+    <a class="card__title">Апельсин крупный, 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv vegetables">
+            <div class="card__top">
+        <a href="goodVegetables1.html" class="card__image">
+                <img class="imggood" src="vegetables1.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">6.29</div>
+            <div class="card__price card__price--common">6.53</div>
+          </div>
+    </div>
+    <a class="card__title">Огурец «Бьерн» 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv vegetables">
+            <div class="card__top">
+        <a href="goodVegetables2.html" class="card__image">
+                <img class="imggood" src="vegetables2.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">1.95</div>
+            <div class="card__price card__price--common">1.95</div>
+          </div>
+    </div>
+    <a class="card__title">Картофель, 1 кг</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv vegetables">
+            <div class="card__top">
+        <a href="goodVegetables3.html" class="card__image">
+                <img class="imggood" src="vegetables3.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">2.99</div>
+            <div class="card__price card__price--common">2.99</div>
+          </div>
+    </div>
+    <a class="card__title">Грибы шампиньоны, 250 г</a>
+    <button class="card__add">В корзину</button>
+    </div>
+        <div class="card filterDiv vegetables">
+            <div class="card__top">
+        <a href="goodVegetables4.html" class="card__image">
+                <img class="imggood" src="vegetables4.jpg">
+        </a>
+    </div>
+    <div class="card__label"></div>
+    <div class="card__bottom">
+        <div class="card__prices">
+            <div class="card__price card__price--discount">4.2</div>
+            <div class="card__price card__price--common">4.2</div>
+          </div>
+    </div>
+    <a class="card__title">Свекла 1 кг</a>
+    <button class="card__add">В корзину</button>
+        </div>
+    </div>
+    <div class="popup">
+        <div class="popup__container" id="popup_container">
+          <div class="popup__item">
+            <h1 class="popup__title">Оформление заказа</h1>
+          </div>
+          <div class="popup__item" id="popup_product_list">
+            <div class="popup__product">
+              <div class="popup__product-wrap">
+                <img
+                  src=""
+                  alt=""
+                  class="popup__product-image"
+                />
+                <h2 class="popup__product-title">
+                  Текси
+                </h2>
+              </div>
+              <div class="popup__product-wrap">
+                <div class="popup__product-price"></div>
+                <button class="popup__product-delete">✖</button>
+              </div>
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Итого</h2>
+              <output class="popup__cost-value" id="popup_cost"></output>
+            </div>
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Скидка</h2>
+              <output class="popup__cost-value" id="popup_discount"></output>
+            </div>
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Итого со скидкой</h2>
+              <output class="popup__cost-value" id="popup_cost_discount"
+                ></output
+              >
+            </div>
+          </div>
+          <button class="popup__close" id="popup_close">✖</button>
+        </div>
+      </div>
     </main>
     <footer class="foot">
         <div class="fdiv">

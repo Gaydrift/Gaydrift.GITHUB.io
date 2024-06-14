@@ -8,26 +8,82 @@
     <body>
         <header class="head">
             <a href="Project.html"><img class="storename" src="Название магазина.svg"></a>
-            <a href="can.html"><div class="butons">Корзина</div></a> 
+            
             <a href="personalAccount.html"><div class="butons">Личный кабинет</div></a>
             <a href="goods.html"><div class="butons">Товары</div></a>
         </header>
         <header class="head1">
-            <div class="sidenav">
-                <button class="dropdown-btn">Меню
-                </button>
-                <div class="dropdown-container">
-                    <a href="goods.html">Товары</a>
-                    <a href="personalAccount.html">Личный кабинет</a>
-                    <a href="can.html">Корзина</a> 
+            <div class="menu">
+              <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+              <label for="burger-checkbox" class="burger"></label>
+              <ul class="menu-list">
+                  <li><a href="goods.html" class="menu-item">Товары</a><li>
+                  <li><a href="personalAccount.html" class="menu-item">Личный кабинет</a><li>
+                  
+              </ul>
+          </div>
+          </header>
+        <main class="main">
+            <h2>Вакансии</h2>
+            <xml id="j">
+                <?xml version="1.0" encoding="UTF-8"?>
+            <jobs_menu>
+                <job>
+                    <job_name>Вакансия 1<br></job_name>
+                    <job_description>Вы можете связаться с нами по номеру +333333333333 или по электронной почте example1@gmail.com<br><br></job_description>
+                </job>
+                <job>
+                    <job_name>Вакансия 2<br></job_name>
+                    <job_description>Вы можете связаться с нами по номеру +444444444444 или по электронной почте example2@gmail.com<br><br></job_description>
+                </job>
+                <job>
+                    <job_name>Вакансия 3<br></job_name>
+                    <job_description>Вы можете связаться с нами по номеру +555555555555 или по электронной почте example3@gmail.com<br><br></job_description>
+                </job>
+            </jobs_menu>
+            </xml>
+            <div class="popup">
+                <div class="popup__container" id="popup_container">
+                  <div class="popup__item">
+                    <h1 class="popup__title">Оформление заказа</h1>
+                  </div>
+                  <div class="popup__item" id="popup_product_list">
+                    <div class="popup__product">
+                      <div class="popup__product-wrap">
+                        <img
+                          src=""
+                          alt=""
+                          class="popup__product-image"
+                        />
+                        <h2 class="popup__product-title">
+                          Текси
+                        </h2>
+                      </div>
+                      <div class="popup__product-wrap">
+                        <div class="popup__product-price"></div>
+                        <button class="popup__product-delete">✖</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__item">
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого</h2>
+                      <output class="popup__cost-value" id="popup_cost"></output>
+                    </div>
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Скидка</h2>
+                      <output class="popup__cost-value" id="popup_discount"></output>
+                    </div>
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого со скидкой</h2>
+                      <output class="popup__cost-value" id="popup_cost_discount"
+                        ></output
+                      >
+                    </div>
+                  </div>
+                  <button class="popup__close" id="popup_close">✖</button>
                 </div>
               </div>
-        </header>
-        <main class="main">
-            <h2>Нынешние вакансии</h2>
-            <p>Вакансия 1 <br> Вы можете связаться с нами по номеру +333333333333 или по электронной почте example1@gmail.com</p>
-            <p>Вакансия 2 <br> Вы можете связаться с нами по номеру +444444444444 или по электронной почте example2@gmail.com</p>
-            <p>Вакансия 3 <br> Вы можете связаться с нами по номеру +555555555555 или по электронной почте example3@gmail.com</p>
         </main>
         <footer class="foot">
             <div class="fdiv">

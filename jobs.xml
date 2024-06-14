@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jobs_menu>
+    <job>
+        <job_name>Вакансия 1</job_name>
+        <job_description>Вы можете связаться с нами по номеру +333333333333 или по электронной почте example1@gmail.com</job_description>
+    </job>
+    <job>
+        <job_name>Вакансия 2</job_name>
+        <job_description>Вы можете связаться с нами по номеру +444444444444 или по электронной почте example2@gmail.com</job_description>
+    </job>
+    <job>
+        <job_name>Вакансия 3</job_name>
+        <job_description>Вы можете связаться с нами по номеру +555555555555 или по электронной почте example3@gmail.com</job_description>
+    </job>
+</jobs_menu>

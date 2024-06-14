@@ -1,20 +1,334 @@
-
-/*<div class="news1"><img class="imggood" src="milk1l.jpg">Молоко «Брест-Литовск» 3.6 %, 1 л.<br>2.4Br <del>2.49Br</del></div>
-<div class="news2"><img class="imggood" src="bread2jpg.jpg">Хлеб «Ранак» отрубной,нарезанный,500 г<br>1.5Br <del>1.84Br</del></div>
-<div class="news3"><img class="imggood" src="fruit1.jpg">Яблоко «Айдаред» 1 кг<br>4.05Br <del>4.49Br</del></div>
-<div class="news4"><img class="imggood" src="fruit2.jpg">Груша «Пакхам» 1 кг<br>4.19Br <del>5.99Br</del></div>
-<div class="news5"><img class="imggood" src="vegetables1.jpg">Огурец «Бьерн» 1 кг<br>6.29Br <del>6.53Br</del></div>*/
-
+$pravo: right;
+$nichego: none;
+$levo: left;
 @media(max-width: 3000px){
+/**/
+.card {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+  }
+  
+
+  .card:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+  }
+  
+  .card__top {
+    flex: 0 0 220px; 
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  
+  .card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: 0.2s;
+  }
+  
+  
+  .card__image:hover > img {
+    transform: scale(1.1);
+  }
+  
+  
+  .card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; 
+    padding: 10px;
+  }
+  
+  .card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%; 
+  }
+  
+  .card__price::after {
+    content: "Br";
+    margin-left: 4px;
+    position: relative;
+  }
+  
+  .card__price--discount {
+    font-weight: 700;
+    font-size: 19px;
+    color: #414141;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .card__price--discount::before {
+    content: "Со скидкой";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+  
+  .card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #606060;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+  }
+  
+  .card__price--common::before {
+    content: "Обычная";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+  
+  .card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #414141;
+  }
+  
+  /*.card__title:hover {
+    color: #ff6633;
+  }*/
+  
+  .card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #70c05b;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #70c05b;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto; 
+  }
+  
+  .card__add:hover {
+    border: 1px solid #ff6633;
+    background-color: #ff6633;
+    color: #fff;
+  }
+  .cards {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center;
+    column-gap: 100px; 
+    row-gap: 40px; 
+    margin: 0 auto;
+  }
+  .big{
+    display: $nichego;
+  }
+
+  /*.cart {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #364364;
+    transition: 0.1s;
+    cursor: pointer;
+    position: fixed; 
+    top: 50px; 
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    padding: 15px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  }*/
+  
+  
+  .cart:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  
+  /*.cart__num {
+    position: absolute;
+    background-color: #d62240;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    top: -5px;
+    right: -5px;
+  }*/
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.33); 
+    z-index: 1000; 
+    width: 100%;
+    height: 100%;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    overflow-y: scroll;
+  }
+  
+  
+  .popup__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 800px;
+    min-height: 300px;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  
+  .popup__item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .popup__item:last-of-type {
+    border-bottom: none;
+  }
+  
+  .popup__title {
+    font-size: 20px;
+  }
+  
+  
+  .popup__product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .popup__product-wrap {
+    display: flex;
+    align-items: center;
+  }
+  
+  .popup__product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+  
+  .popup__product-title {
+    max-width: 300px;
+    font-weight: 500;
+  }
+  
+  .popup__product-price {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  
+  
+  .popup__product-delete {
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: #d62240;
+  }
+  
+  
+  .popup__cost {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+  }
+  
+  .popup__cost-title {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #364364;
+    text-align: right;
+  }
+  
+  .popup__cost-value {
+    font-size: 20px;
+  }
+  
+
+  .popup__close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    color: rgba(54, 67, 100, 0.7);
+    font-size: 20px;
+  }
+  
+  .popup__close:hover {
+    color: rgb(54, 67, 100);
+  }
+  
+  .popup--open {
+    display: flex;
+  }
+/**/
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0 0 0 0;
 }
 main{
     height: 500px;
+    width: 80%;
+    margin:0 auto;
 }
 a{
-    text-decoration: none;
+    text-decoration: $nichego;
 }
 .storename{
     width: 230px;
@@ -22,32 +336,21 @@ a{
     margin: 0px 10px 0 30px;
 }
 .formhead{
-    float: right;
-}
-.search{
-    border: solid black 1px;
-    width: 640px;
-    height: 50px;
-    margin: 40px 0 0 100px;
+    float: $pravo;
 }
 .head{
     border-bottom: solid black 1px;
     height:130px;
     background-color: #1d272a;
 }
-.dropdown-btn {
-    display: none;
-  }
-  .dropdown-container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-  }
+.menu{
+    display: $nichego;
+}
 .butons{
 width: 200px;
 height: 20px;
 text-align: center;
-float: right;
+float: $pravo;
 margin: 60px 40px 0 0;
 color: white;
 }
@@ -59,8 +362,6 @@ color: white;
     display: flex;
     height:200px;
     background-color: #585858;
-    flex: 0 0 end;
-
 }
 .image{
     width: 40px;
@@ -77,7 +378,7 @@ color: white;
 }
 .ftext1{
     color: white;
-    float: left;
+    float: $levo;
 text-align: center;
 margin: 10px 0 0 20px;
 }
@@ -89,7 +390,7 @@ margin: 10px 0 0 20px;
 }
 .maingridproject{
     display: grid;
-    grid-template-columns: 500px 350px 350px;
+    grid-template-columns: auto auto auto;
     grid-template-rows: 250px 250px;
 }
 .maingridgoods{
@@ -108,7 +409,7 @@ margin: 10px 0 0 20px;
 }
 
 .slideshow-container {
-    display: none;
+    display: $nichego;
   }
   
 .news1{
@@ -157,12 +458,12 @@ margin: 10px 0 0 20px;
     height: 50px;
 }
 .silka{
-    float: right;
+    float: $pravo;
     margin: 30px 0px 0px 0px;
 }
 .imggood{
-    width: 100%;
-    height: 80%;
+    width: 340px;
+    height: 70%;
 }
 .imagegood1{
     margin: 0 0 0 20px;
@@ -174,7 +475,7 @@ width: 100%;
 height: 100%;
 }
 .goodname{
-    float: right;
+    float: $levo;
     margin: 20px 20px 0 0;
 }
 .add{
@@ -184,21 +485,22 @@ height: 100%;
     color: white;
     text-align: center;
     background-color: greenyellow;
-    float: right;
+    float: $pravo;
     margin: 20px 20px 0 0;
 }
 hr{
     background-color: black;
     height: 1px;
     border: 0;
+    margin-top: 100px;
 }
 .left{
-    float: left;
+    float: $levo;
     width: 100px;
     margin: 10px 40px 0 10px;
 }
 .right{
-    float: right;
+    float: $pravo;
 }
 .good{
     border: solid black 1px;
@@ -207,44 +509,44 @@ hr{
     margin: 20px 30px 0 20px;
 }
 .goodtovar{
-    float: left;
+    float: $levo;
     background-color: #2196F3;
     color: #ffffff;
     width: 300px;
     height: 350px;
     text-align: center;
     margin: 2px;
-    display: none;
+    display: $nichego;
 }
 .container {
     overflow: hidden;
   }
   .filterDiv {
-    float: left;
+    /*float: $levo;*/
     width: 300px;
     height: 350px;
     text-align: center;
     margin: 40px 30px 0 0;
-    display: none;
+    display: $nichego;
     color: black;
   }
   .show {
-    display: block;
+    display: flex; /*block*/
   }
   .noshow{
-    display: none;
+    display: $nichego;
   }
   .btn {
     width: 100px;
     height: auto;
-    border: none;
-    outline: none;
+    border: $nichego;
+    outline: $nichego;
     padding: 12px 16px;
-    background-color: #f1f1f1;
+    background-color: white;
     cursor: pointer;
   }
   .btn:hover {
-    background-color: #ddd;
+    background-color: rgb(195, 194, 194);
   }
   .btn.active {
     background-color: #666;
@@ -252,7 +554,7 @@ hr{
   }
 .clean{
     border: solid black 1px;
-    float: right;
+    float: $pravo;
     height: 30px;
     width: 100px;
     text-align: center;
@@ -267,7 +569,7 @@ hr{
     color: grey;
 }
 .order{
-    display: none;
+    display: $nichego;
     border: solid black 1px;
     height: 130px;
     width: 1360px;
@@ -277,7 +579,7 @@ hr{
 }
 .goodcan{
     border: solid black 1px;
-    float: left;
+    float: $levo;
     height: 130px;
     width: 260px;
 }
@@ -286,7 +588,7 @@ hr{
     width: 20px;
     height: 20px;
     text-align: center;
-    float: right;
+    float: $pravo;
     margin: 30px 10px 0 0;
 }
 .amount{
@@ -294,7 +596,7 @@ hr{
     width: 30px;
     height: 20px;
     text-align: center;
-    float: right;
+    float: $pravo;
     margin: 30px 10px 0 0;
 }
 .minus-butn{
@@ -302,13 +604,13 @@ hr{
     width: 20px;
     height: 20px;
     text-align: center;
-    float: right;
+    float: $pravo;
     margin: 30px 10px 0 0;
 }
 .payment{
     border: solid black 1px;
     height: 30px;
-    float: right;
+    float: $pravo;
     grid-column-start: 6;
     grid-column-end: 7;
     grid-row-start: 17;
@@ -317,50 +619,66 @@ hr{
     margin-left: 10px;
     cursor: pointer;
 }
-.store1{
-    border: solid black 1px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 430px;
-    height: 50px;
-    margin: 20px 0 0 40px;
-}
-.store2{
-    border: solid black 1px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 430px;
-    height: 50px;
-    margin: 20px 0 0 40px;
-}
-.store3{
-    border: solid black 1px;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 430px;
-    height: 50px;
-    margin: 20px 0 0 40px;
-}
 .settings{
     text-align: center;
     }
 }
-    @media(max-width: 1200px){
+@media(max-width: 1200px){
+    *{
+        font-size: 110%;
+    }
+    .big {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #364364;
+    transition: 0.1s;
+    cursor: pointer;
+    position: fixed; 
+    top: 50px; 
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    padding: 15px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .big:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  
+  .cart__num {
+    position: absolute;
+    background-color: #d62240;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    top: -5px;
+    right: -5px;
+  }
         body{
             font-family: 'Roboto', sans-serif;
             margin: 0 0 0 0;
+            height: 1000px;
         }
         main{
-            height: 500px;
+            height: 100%;
+    width: 80%;
+    margin: 0 auto;
         }
         a{
-            text-decoration: none;
+            text-decoration: $nichego;
         }
         .storename{
             width: 230px;
@@ -368,45 +686,37 @@ hr{
             margin: 0px 10px 0 30px;
         }
         .formhead{
-            float: right;
-        }
-        .search{
-            border: solid black 1px;
-            width: 640px;
-            height: 50px;
-            margin: 40px 0 0 100px;
+            float: $pravo;
         }
         .head{
             border-bottom: solid black 1px;
-            height:130px;
+            height:15%;
             background-color: #1d272a;
         }
         .head1{
             border-bottom: solid black 1px;
-            height:30px;
-            background-color: #333637;
+            height:40px;
+            background-color: #696d6e;
         }
         
         * {box-sizing:border-box}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 80%;
-  height: 90%;
+  z-index: 0;
   position: relative;
   margin: auto;
   display: block;
 }
 
-/* Hide the images by default */
 .mySlides {
+    z-index: 0;
     margin-top: 10px;
     width: 100%;
     height: 100%;
-    display: none;
+    display: $nichego;
 }
 
-/* Next & previous buttons */
 .prev, .next {
     position: absolute;
   cursor: pointer;
@@ -421,18 +731,15 @@ hr{
   border-radius: 0 3px 3px 0;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
 .text {
   color: black;
   font-size: 15px;
@@ -443,7 +750,6 @@ hr{
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -452,7 +758,6 @@ hr{
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -468,7 +773,6 @@ hr{
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -485,56 +789,91 @@ hr{
   from {opacity: .4}
   to {opacity: 1}
 }
-
-        .sidenav {
-            width: 200px;
-            overflow-x: hidden;
-          }
-          
-          /* Стиль боковых навигационных ссылок и раскрывающейся кнопки */
-          .sidenav a, .dropdown-btn {
-            padding: 6px 8px 6px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            display: block;
-            border: none;
-            background: none;
-            width:100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-          }
-          
-          /* При наведении курсора мыши */
-          .sidenav a:hover, .dropdown-btn:hover {
-            color: #f1f1f1;
-          }
-          
-          
-          /* Добавить активный класс для кнопки активного выпадающего списка */
-          .active {
-            background-color: green;
-            color: white;
-          }
-          
-          /* Выпадающий контейнер (по умолчанию скрыт). Необязательно: добавьте более светлый цвет фона и некоторые левые отступы, чтобы изменить дизайн выпадающего содержимого */
-          .dropdown-container {
-            display: none;
-            position: absolute;
-            background-color: #333637;
-            padding-left: 8px;
-            z-index: 9999;
-          }
+.menu{
+    display: block;
+    width: 200px;
+}
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+  }
+  .menu-list {
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    padding: 42px 0;
+    margin: 0;
+    background-color: #696d6e;
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: .3s;
+    width: 170px;
+  }
+  .menu-item {
+    display: block;
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .menu-item:hover {
+    background: rgba(255,255,255,.2)
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+  }
         .butons{
-        display: none;
+        display: $nichego;
         }
         .butons1{
             display: block;
             width: 200px;
             height: 20px;
             text-align: center;
-            float: right;
+            float: $pravo;
             margin: 60px 40px 0 0;
             color: white;
             background-color: #1d272a;
@@ -545,10 +884,11 @@ hr{
         .foot{
             border-top: solid black 1px;
             display: flex;
-            height:200px;
+            height: 20%;
             background-color: #585858;
             flex: 0 0 end;
             bottom: 0;
+            margin-top: 20px;
         }
         .image{
             width: 40px;
@@ -556,7 +896,7 @@ hr{
         }
         .imggood{
             width: 100%;
-            height: 80%;
+            height: 60%;
         }
         .fdiv{
             width: 100%;
@@ -569,7 +909,7 @@ hr{
         }
         .ftext1{
             color: white;
-            float: left;
+            float: $levo;
         text-align: center;
         margin: 10px 0 0 20px;
         }
@@ -585,9 +925,11 @@ hr{
         .maingridgoods{
             height: auto;
             overflow: hidden;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
+            padding-left: 100px;
         }
         .maingridcan{
+            height: 80%;
             display: grid;
             grid-template-columns: auto auto auto auto 100px 150px;
             grid-template-rows: auto auto auto auto auto auto;
@@ -601,35 +943,35 @@ hr{
             margin: 20px 30px 0 20px;
             width: 80%;
             height: 60%;
-            display: none;
+            display: $nichego;
         }
         .news2{
             border: solid black 1px;
             margin: 20px 30px 0 20px;
             width: 80%;
             height: 60%;
-            display: none;
+            display: $nichego;
         }
         .news3{
             border: solid black 1px;
             margin: 20px 30px 0 20px;
             width: 80%;
             height: 60%;
-            display: none;
+            display: $nichego;
         }
         .news4{
             border: solid black 1px;
             margin: 20px 30px 0 20px;
             width: 80%;
             height: 60%;
-            display: none;
+            display: $nichego;
         }
         .news5{
             border: solid black 1px;
             margin: 20px 30px 0 20px;
             width: 80%;
             height: 60%;
-            display: none;
+            display: $nichego;
         }
         .bire{
             border: solid black 1px;
@@ -637,7 +979,7 @@ hr{
             height: 50px;
         }
         .silka{
-            float: right;
+            float: $pravo;
             margin: 30px 0px 0px 0px;
         }
         .imagegood1{
@@ -647,31 +989,32 @@ hr{
             height: 250px;
         }
         .goodname{
-            float: right;
+            float: $levo;
             margin: 20px 20px 0 0;
         }
         .add{
             border:solid black 1px;
-            width: 130px;
+            width: auto;
             height: 30px;
             color: white;
             text-align: center;
             background-color: greenyellow;
-            float: right;
+            float: $pravo;
             margin: 20px 20px 0 0;
         }
         hr{
             background-color: black;
             height: 1px;
             border: 0;
+            margin-top: 100px;
         }
         .left{
-            float: left;
+            float: $levo;
             width: 100px;
             margin: 10px 40px 0 10px;
         }
         .right{
-            float: right;
+            float: $pravo;
         }
         .good{
             border: solid black 1px;
@@ -680,39 +1023,38 @@ hr{
             margin: 20px 30px 0 20px;
         }
         .goodtovar{
-            float: left;
+            float: $levo;
             background-color: #2196F3;
             color: #ffffff;
             width: 300px;
             height: 350px;
             text-align: center;
             margin: 2px;
-            display: none;
+            display: $nichego;
         }
         .container {
             overflow: hidden;
           }
           .filterDiv {
             
-            float: left;
+            /*float: $levo;*/
             width: 300px;
-            height: 350px;
             text-align: center;
-            margin: 40px 30px 0 0;
-            display: none;
+            margin: 40px 10px 0 0;
+            display: $nichego;
             color: black;
           }
           .show {
-            display: block;
+            display: flex;
           }
           .noshow{
-            display: none;
+            display: $nichego;
           }
           .btn {
-            width: 100px;
+            width: 220px;
             height: auto;
-            border: none;
-            outline: none;
+            border: $nichego;
+            outline: $nichego;
             padding: 12px 16px;
             background-color: #f1f1f1;
             cursor: pointer;
@@ -726,12 +1068,12 @@ hr{
           }
         .clean{
             border: solid black 1px;
-            float: right;
-            height: 30px;
-            width: 100px;
+            float: $pravo;
+            height: 40px;
+            width: auto;
             text-align: center;
-            grid-column-start: 5;
-            grid-column-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 4;
             grid-row-start: 17;
             grid-row-end: 18;
             margin-top: 10px;
@@ -741,7 +1083,7 @@ hr{
             color: grey;
         }
         .order{
-            display: none;
+            display: $nichego;
             border: solid black 1px;
             height: 130px;
             width: 1360px;
@@ -751,77 +1093,367 @@ hr{
         }
         .goodcan{
             border: solid black 1px;
-            float: left;
+            float: $levo;
             height: 130px;
             width: 260px;
         }
-        .plus-butn{
-            border: solid black 1px;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            float: right;
-            margin: 30px 10px 0 0;
-        }
-        .amount{
-            border: solid black 1px;
-            width: 30px;
-            height: 20px;
-            text-align: center;
-            float: right;
-            margin: 30px 10px 0 0;
-        }
-        .minus-butn{
-            border: solid black 1px;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            float: right;
-            margin: 30px 10px 0 0;
-        }
         .payment{
             border: solid black 1px;
-            height: 30px;
-            float: right;
-            grid-column-start: 6;
+            height: 40px;
+            width: auto;
+            float: $pravo;
+            grid-column-start: 4;
             grid-column-end: 7;
             grid-row-start: 17;
             grid-row-end: 18;
             margin-top: 10px;
             margin-left: 10px;
+            text-align: center;
             cursor: pointer;
-        }
-        .store1{
-            border: solid black 1px;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            width: 430px;
-            height: 50px;
-            margin: 20px 0 0 40px;
-        }
-        .store2{
-            border: solid black 1px;
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            width: 430px;
-            height: 50px;
-            margin: 20px 0 0 40px;
-        }
-        .store3{
-            border: solid black 1px;
-            grid-column-start: 3;
-            grid-column-end: 4;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            width: 430px;
-            height: 50px;
-            margin: 20px 0 0 40px;
         }
         .settings{
             text-align: center;
             }
     }
+@media(max-width: 980px){
+    *{
+        font-size: 120%;
+    }
+    /**/
+    .cards {
+      display: grid;
+      
+      grid-template-columns: auto;
+      width: 100%;
+      max-width: 1000px; 
+      justify-content: center;
+      justify-items: center;
+      column-gap: 100px; 
+      row-gap: 40px; 
+      margin: 0 auto;
+    }
+    .card__title {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 110%;
+        line-height: 150%;
+        color: #414141;
+    }
+    .card {
+      width: 600px;
+      min-height: 350px;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column; 
+      border-radius: 4px;
+      transition: 0.2s;
+      position: relative;
+    }
+    
+  
+    .card:hover {
+      box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    }
+    
+    .card__top {
+      flex: 0 0 400px; 
+      position: relative;
+      overflow: hidden; 
+    }
+    
+    
+    .card__image {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .card__image > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+      transition: 0.2s;
+    }
+    
+    
+    .card__image:hover > img {
+      transform: scale(1.1);
+    }
+    
+    
+    .card__label {
+      padding: 4px 8px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+    }
+    
+    .card__bottom {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto; 
+      padding: 10px;
+    }
+    
+    .card__prices {
+      display: flex;
+      margin-bottom: 10px;
+      flex: 0 0 50%; 
+    }
+    
+    .card__price::after {
+      content: "Br";
+      margin-left: 4px;
+      position: relative;
+    }
+    
+    .card__price--discount {
+      font-weight: 700;
+      font-size: 40px;
+      color: #414141;
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+    
+    .card__price--discount::before {
+      content: "Со скидкой";
+      font-weight: 400;
+      font-size: 35px;
+      color: #bfbfbf;
+    }
+    
+    .card__price--common {
+      font-weight: 400;
+      font-size: 40px;
+      color: #606060;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: flex-end;
+    }
+    
+    .card__price--common::before {
+      content: "Обычная";
+      font-weight: 400;
+      font-size: 35px;
+      color: #bfbfbf;
+    }
+    
+    /*.card__title:hover {
+      color: #ff6633;
+    }*/
+    
+    .card__add {
+      display: block;
+      width: 100%;
+      font-weight: 400;
+      height: 100px;
+      font-size: 35px;
+      color: #70c05b;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #70c05b;
+      border-radius: 4px;
+      cursor: pointer; 
+      transition: 0.2s;
+      margin-top: auto; 
+    }
+    
+    .card__add:hover {
+      border: 1px solid #ff6633;
+      background-color: #ff6633;
+      color: #fff;
+    }
+    /**/
+    body{
+        height: 2500px;
+    }
+    .storename{
+        width: 400px;
+        height: 200px;
+        margin: 0px 10px 0 30px;
+    }
+    .maingridproject{
+        display: block;
+        height: auto;
+    }
+    .mainPersonal{
+        height: auto;
+    }
+    .news1{
+        border: solid black 1px;
+        margin: 20px 30px 0 20px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .news2{
+        border: solid black 1px;
+        margin: 20px 30px 0 20px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .news3{
+        border: solid black 1px;
+        margin: 20px 30px 0 20px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .news4{
+        border: solid black 1px;
+        margin: 20px 30px 0 20px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .news5{
+        border: solid black 1px;
+        margin: 20px 30px 0 20px;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .menu{
+        display: block;
+        width: 300px;
+        font-size: 120%;
+    }
+    .burger-checkbox {
+        position: absolute;
+        visibility: hidden;
+      }
+      .burger {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        display: block;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 26px;
+        font-size: 120%;
+        padding: 5px 0 0 5px;
+      }
+      .burger::before,
+      .burger::after {
+        content: '';
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: #000;
+      }
+      .burger::before {
+        top: 0;
+        box-shadow: 0 11px 0 #000;
+        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+      }
+      .burger::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+      }
+      .burger-checkbox:checked + .burger::before {
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0,0,0,0);
+        transition: box-shadow .15s, top .3s, transform .3s .15s;
+      }
+      .burger-checkbox:checked + .burger::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+      }
+      .menu-list {
+        z-index: 1;
+        display: grid;
+        gap: 12px;
+        padding: 42px 0;
+        margin: 0;
+        background-color: #696d6e;
+        list-style-type: none;
+        transform: translateX(-100%);
+        transition: .3s;
+        width: 100%;
+      }
+      .menu-item {
+        display: block;
+        padding: 8px;
+        color: white;
+        font-size: 120%;
+        text-align: center;
+        text-decoration: none;
+      }
+      .menu-item:hover {
+        background: rgba(255,255,255,.2)
+      }
+      .burger-checkbox:checked ~ .menu-list {
+        transform: translateX(0);
+      }
+    .slideshow-container {
+        display: $nichego;
+      }
+      .slideshow-change{
+        display: $nichego;
+    }
+      .ftext1{
+        color: white;
+        float: $levo;
+    text-align: center;
+    font-size: 100%;
+    margin: 10px 0 0 20px;
+    }
+    .ftext2{
+        color: white;
+        text-align: center;
+        display: inline-block;
+        font-size: 100%;
+        margin: 10px 0 0 20px;
+    }
+
+    .head1{
+        border-bottom: solid black 1px;
+        height:50px;
+        background-color: #696d6e;
+    }
+    .filterDiv {
+            
+        /*float: $pravo;*/
+        width: 600px;
+        height: 700px;
+        text-align: center;
+        margin: 10px 30px 0 0;
+
+        color: black;
+      }
+      .goodname{
+        float: $levo;
+        margin: 20px 20px 0 0;
+    }
+    .add{
+        border:solid black 1px;
+        width: auto;
+        height: auto;
+        color: white;
+        text-align: center;
+        background-color: greenyellow;
+        float: $pravo;
+        margin: 20px 20px 0 0;
+    }
+    hr{
+        background-color: black;
+        height: 1px;
+        border: 0;
+        margin-top: 200px;
+    }
+}

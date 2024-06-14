@@ -8,29 +8,73 @@
     <body>
         <header class="head">
             <a href="Project.html"><img class="storename" src="Название магазина.svg"></a>
-            <a href="can.html"><div class="butons">Корзина</div></a> 
+            
             <a href="personalAccount.html"><div class="butons">Личный кабинет</div></a>
             <a href="goods.html"><div class="butons">Товары</div></a>
         </header>
         <header class="head1">
-            <div class="sidenav">
-                <button class="dropdown-btn">Меню
-                </button>
-                <div class="dropdown-container">
-                    <a href="goods.html">Товары</a>
-                    <a href="personalAccount.html">Личный кабинет</a>
-                    <a href="can.html">Корзина</a> 
-                </div>
-              </div>
-        </header>
+            <div class="menu">
+              <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+              <label for="burger-checkbox" class="burger"></label>
+              <ul class="menu-list">
+                  <li><a href="goods.html" class="menu-item">Товары</a><li>
+                  <li><a href="personalAccount.html" class="menu-item">Личный кабинет</a><li>
+                  
+              </ul>
+          </div>
+          </header>
         <main class="main">
         <div class="goods1">
-            <button onclick="addVegetables2Selection('vegetables2')" class="add">Добавить</button>
-            <p class="goodname">Картофель, 1 кг<br>1.95Br</p>
+            
             <div class="imagegood1"><img src="vegetables2.jpg" ></div>
-            <hr>
-            <p>Описание</p>
+            <p class="goodname">Картофель, 1 кг<br>1.95Br</p>
+            
+            
         </div>
+        <hr>
+            <p>Описание</p>
+            <div class="popup">
+                <div class="popup__container" id="popup_container">
+                  <div class="popup__item">
+                    <h1 class="popup__title">Оформление заказа</h1>
+                  </div>
+                  <div class="popup__item" id="popup_product_list">
+                    <div class="popup__product">
+                      <div class="popup__product-wrap">
+                        <img
+                          src=""
+                          alt=""
+                          class="popup__product-image"
+                        />
+                        <h2 class="popup__product-title">
+                          Текси
+                        </h2>
+                      </div>
+                      <div class="popup__product-wrap">
+                        <div class="popup__product-price"></div>
+                        <button class="popup__product-delete">✖</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup__item">
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого</h2>
+                      <output class="popup__cost-value" id="popup_cost"></output>
+                    </div>
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Скидка</h2>
+                      <output class="popup__cost-value" id="popup_discount"></output>
+                    </div>
+                    <div class="popup__cost">
+                      <h2 class="popup__cost-title">Итого со скидкой</h2>
+                      <output class="popup__cost-value" id="popup_cost_discount"
+                        ></output
+                      >
+                    </div>
+                  </div>
+                  <button class="popup__close" id="popup_close">✖</button>
+                </div>
+              </div>
         </main>
         <footer class="foot">
             <div class="fdiv">
